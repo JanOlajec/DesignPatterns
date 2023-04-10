@@ -1,6 +1,17 @@
 # DesignPatterns
 
-Some selected design patterns examples
+Some selected design patterns examples, but firs some Object Oriented Basic and Principes.
+
+## OO Basic
+- Abstraction
+- Encapsulation
+- Polymorphysm
+- Inheritance
+
+## OO Principes
+- Encapsulate what varies.
+- Favor composition over inheritance.
+- Program to interfaces, not implemementation.
  
 ## Strategy pattern
 

@@ -18,8 +18,8 @@ Some selected design patterns examples, but firs some Object Oriented Basic and 
 Strategy - defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it. 
 
 UML diagram with example "Navigator" 
-![Strategy in example Navigator](/Doc/UML/StrategyNavigate.jpg)
+![Strategy in example Navigator](/Doc/UML/StrategyNavigator.JPG)
 
 UML diagram with example "Duck simulator" 
-![Strategy in example Duck](/Doc/UML/StrategyDuck.jpg) 
+![Strategy in example Duck](/Doc/UML/StrategyDuck.JPG) 
  

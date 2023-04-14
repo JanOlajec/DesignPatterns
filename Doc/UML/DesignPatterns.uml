@@ -1,93 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Cw6uINh4Ee2japnN30OJXA" name="DesignPatterns">
-  <packagedElement xmi:type="uml:Association" xmi:id="__27mMNlcEe2LwL6XIQbkQQ" memberEnd="__3YSItlcEe2LwL6XIQbkQQ __3iDItlcEe2LwL6XIQbkQQ">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__3YSINlcEe2LwL6XIQbkQQ" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__3YSIdlcEe2LwL6XIQbkQQ" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="__3iDItlcEe2LwL6XIQbkQQ" name="duck" type="_KYa0kNiEEe2japnN30OJXA" association="__27mMNlcEe2LwL6XIQbkQQ"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_bCJ-ENrhEe2DI8nYtfsznQ" name="StrategyDuck">
+    <packagedElement xmi:type="uml:Association" xmi:id="__27mMNlcEe2LwL6XIQbkQQ" memberEnd="__3YSItlcEe2LwL6XIQbkQQ __3iDItlcEe2LwL6XIQbkQQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__3YSINlcEe2LwL6XIQbkQQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__3YSIdlcEe2LwL6XIQbkQQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="__3iDItlcEe2LwL6XIQbkQQ" name="duck" type="_KYa0kNiEEe2japnN30OJXA" association="__27mMNlcEe2LwL6XIQbkQQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Skf4kNldEe2LwL6XIQbkQQ" memberEnd="_Skf4k9ldEe2LwL6XIQbkQQ _Skf4ltldEe2LwL6XIQbkQQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Skf4kdldEe2LwL6XIQbkQQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Skf4ktldEe2LwL6XIQbkQQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Skf4ltldEe2LwL6XIQbkQQ" name="duck" type="_KYa0kNiEEe2japnN30OJXA" association="_Skf4kNldEe2LwL6XIQbkQQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_byHesNldEe2LwL6XIQbkQQ" memberEnd="_byM-QtldEe2LwL6XIQbkQQ _byRPsNldEe2LwL6XIQbkQQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_byM-QNldEe2LwL6XIQbkQQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_byM-QdldEe2LwL6XIQbkQQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_byRPsNldEe2LwL6XIQbkQQ" name="duck" type="_KYa0kNiEEe2japnN30OJXA" association="_byHesNldEe2LwL6XIQbkQQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_yTBf0NldEe2LwL6XIQbkQQ" name="Quacking">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_icTEUNiEEe2japnN30OJXA" name="IQuack">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_nS0HUNiEEe2japnN30OJXA" name="Quack"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ZzGpwNlcEe2LwL6XIQbkQQ" name="DoNotQuack">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hW6ZcNlcEe2LwL6XIQbkQQ" client="_ZzGpwNlcEe2LwL6XIQbkQQ" supplier="_icTEUNiEEe2japnN30OJXA" contract="_icTEUNiEEe2japnN30OJXA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Y7KVINlcEe2LwL6XIQbkQQ" name="DoQuack">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_fnRAwNlcEe2LwL6XIQbkQQ" client="_Y7KVINlcEe2LwL6XIQbkQQ" supplier="_icTEUNiEEe2japnN30OJXA" contract="_icTEUNiEEe2japnN30OJXA"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="__8oJENldEe2LwL6XIQbkQQ" name="Swiming">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_QeSxMNiFEe2japnN30OJXA" name="ISwim">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Toaj0NiFEe2japnN30OJXA" name="Swim"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_uE_OkNlcEe2LwL6XIQbkQQ" name="DoNotSwim">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_xWPj8NlcEe2LwL6XIQbkQQ" client="_uE_OkNlcEe2LwL6XIQbkQQ" supplier="_QeSxMNiFEe2japnN30OJXA" contract="_QeSxMNiFEe2japnN30OJXA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_u21iQNlcEe2LwL6XIQbkQQ" name="DoSwim">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_2VcB0NlcEe2LwL6XIQbkQQ" client="_u21iQNlcEe2LwL6XIQbkQQ" supplier="_QeSxMNiFEe2japnN30OJXA" contract="_QeSxMNiFEe2japnN30OJXA"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_KeUmMNleEe2LwL6XIQbkQQ" name="Flying">
+      <packagedElement xmi:type="uml:Class" xmi:id="_GJ51kNlcEe2LwL6XIQbkQQ" name="DoPartiallyFly">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Ofj48NlcEe2LwL6XIQbkQQ" client="_GJ51kNlcEe2LwL6XIQbkQQ" supplier="_ZrvYMNiFEe2japnN30OJXA" contract="_ZrvYMNiFEe2japnN30OJXA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_BRvMwNlcEe2LwL6XIQbkQQ" name="DoNotFly">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_NwAEQNlcEe2LwL6XIQbkQQ" client="_BRvMwNlcEe2LwL6XIQbkQQ" supplier="_ZrvYMNiFEe2japnN30OJXA" contract="_ZrvYMNiFEe2japnN30OJXA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_KaSiINlbEe2LwL6XIQbkQQ" name="DoFly">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_fXD3ANlbEe2LwL6XIQbkQQ" client="_KaSiINlbEe2LwL6XIQbkQQ" supplier="_ZrvYMNiFEe2japnN30OJXA" contract="_ZrvYMNiFEe2japnN30OJXA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_ZrvYMNiFEe2japnN30OJXA" name="IFly">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_dHvlANiFEe2japnN30OJXA" name="Fly"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="__wREcNnTEe27_7n3JCDiqA" name="Client">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_uubeoNnUEe27_7n3JCDiqA" annotatedElement="_KYa0kNiEEe2japnN30OJXA">
+        <body>QuackingStrategy.Quack();</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="__JlNANnVEe27_7n3JCDiqA" annotatedElement="_CjEZINlZEe2LwL6XIQbkQQ">
+        <body>QuackingStrategy = new DoNotQuack();</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_pIPyMNrlEe2DI8nYtfsznQ" annotatedElement="__wREcNnTEe27_7n3JCDiqA">
+        <body>metalDuck.Quack();</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Class" xmi:id="_CjEZINlZEe2LwL6XIQbkQQ" name="MetalDuck">
+        <generalization xmi:type="uml:Generalization" xmi:id="_CjEZIdlZEe2LwL6XIQbkQQ" general="_KYa0kNiEEe2japnN30OJXA"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_MWTYUNlaEe2LwL6XIQbkQQ" name="Display"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_YvXcMNlZEe2LwL6XIQbkQQ" name="WoodenDuck">
+        <generalization xmi:type="uml:Generalization" xmi:id="_uDlnwNlZEe2LwL6XIQbkQQ" general="_KYa0kNiEEe2japnN30OJXA"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_cI3HkNlZEe2LwL6XIQbkQQ" name="Display"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_KYa0kNiEEe2japnN30OJXA" name="Duck" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_YVuc8NiEEe2japnN30OJXA" name="QuackingStrategy" visibility="public" type="_icTEUNiEEe2japnN30OJXA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_rF13kNiFEe2japnN30OJXA" name="SwimingStrategy" visibility="public" type="_QeSxMNiFEe2japnN30OJXA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xoj9sNiFEe2japnN30OJXA" name="FlyingStrategy" type="_ZrvYMNiFEe2japnN30OJXA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="__3YSItlcEe2LwL6XIQbkQQ" name="iquack" type="_icTEUNiEEe2japnN30OJXA" aggregation="shared" association="__27mMNlcEe2LwL6XIQbkQQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Skf4k9ldEe2LwL6XIQbkQQ" name="iswim" type="_QeSxMNiFEe2japnN30OJXA" aggregation="shared" association="_Skf4kNldEe2LwL6XIQbkQQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_byM-QtldEe2LwL6XIQbkQQ" name="ifly" type="_ZrvYMNiFEe2japnN30OJXA" aggregation="shared" association="_byHesNldEe2LwL6XIQbkQQ"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_4-CL4NiEEe2japnN30OJXA" name="Display" isAbstract="true"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_bYMNQNnVEe27_7n3JCDiqA" name="Quack"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_eTDb4NnVEe27_7n3JCDiqA" name="Swin"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_fzrhINnVEe27_7n3JCDiqA" name="Fly"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_8o9TkNiGEe2japnN30OJXA" name="DomesticDuck">
+        <generalization xmi:type="uml:Generalization" xmi:id="_D8zUoNiHEe2japnN30OJXA" general="_KYa0kNiEEe2japnN30OJXA"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_NZaZANiHEe2japnN30OJXA" name="Display"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_LDmPwNlZEe2LwL6XIQbkQQ" name="WildDuck">
+        <generalization xmi:type="uml:Generalization" xmi:id="_s19-ENlZEe2LwL6XIQbkQQ" general="_KYa0kNiEEe2japnN30OJXA"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_S-6ggNlZEe2LwL6XIQbkQQ" name="Display"/>
+      </packagedElement>
+    </packagedElement>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_Skf4kNldEe2LwL6XIQbkQQ" memberEnd="_Skf4k9ldEe2LwL6XIQbkQQ _Skf4ltldEe2LwL6XIQbkQQ">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Skf4kdldEe2LwL6XIQbkQQ" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Skf4ktldEe2LwL6XIQbkQQ" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_Skf4ltldEe2LwL6XIQbkQQ" name="duck" type="_KYa0kNiEEe2japnN30OJXA" association="_Skf4kNldEe2LwL6XIQbkQQ"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_byHesNldEe2LwL6XIQbkQQ" memberEnd="_byM-QtldEe2LwL6XIQbkQQ _byRPsNldEe2LwL6XIQbkQQ">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_byM-QNldEe2LwL6XIQbkQQ" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_byM-QdldEe2LwL6XIQbkQQ" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_byRPsNldEe2LwL6XIQbkQQ" name="duck" type="_KYa0kNiEEe2japnN30OJXA" association="_byHesNldEe2LwL6XIQbkQQ"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="_yTBf0NldEe2LwL6XIQbkQQ" name="Quacking">
-    <packagedElement xmi:type="uml:Interface" xmi:id="_icTEUNiEEe2japnN30OJXA" name="IQuack">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_nS0HUNiEEe2japnN30OJXA" name="Quack"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_g_YKcNrhEe2DI8nYtfsznQ" name="StrategyNavigator">
+    <packagedElement xmi:type="uml:Package" xmi:id="_S1ga0NrjEe2DI8nYtfsznQ" name="RouteStrategy">
+      <packagedElement xmi:type="uml:Class" xmi:id="_BqdEENrjEe2DI8nYtfsznQ" name="ByWalk">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_BqdEEdrjEe2DI8nYtfsznQ" client="_BqdEENrjEe2DI8nYtfsznQ" supplier="_O0wXoNriEe2DI8nYtfsznQ" contract="_O0wXoNriEe2DI8nYtfsznQ"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_BqdEEtrjEe2DI8nYtfsznQ" name="BuildRoute">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BqdEE9rjEe2DI8nYtfsznQ" name="from">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BqdEFNrjEe2DI8nYtfsznQ" name="to">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_osSWUNriEe2DI8nYtfsznQ" name="ByCar">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_vt_egNriEe2DI8nYtfsznQ" client="_osSWUNriEe2DI8nYtfsznQ" supplier="_O0wXoNriEe2DI8nYtfsznQ" contract="_O0wXoNriEe2DI8nYtfsznQ"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_sXEmANriEe2DI8nYtfsznQ" name="BuildRoute">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_sXEmAdriEe2DI8nYtfsznQ" name="from">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_sXEmAtriEe2DI8nYtfsznQ" name="to">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_xYqQkNriEe2DI8nYtfsznQ" name="ByBicycle">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_xYqQkdriEe2DI8nYtfsznQ" client="_xYqQkNriEe2DI8nYtfsznQ" supplier="_O0wXoNriEe2DI8nYtfsznQ" contract="_O0wXoNriEe2DI8nYtfsznQ"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_xYqQktriEe2DI8nYtfsznQ" name="BuildRoute">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_xYqQk9riEe2DI8nYtfsznQ" name="from">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_xYqQlNriEe2DI8nYtfsznQ" name="to">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_O0wXoNriEe2DI8nYtfsznQ" name="IRouteStrategy">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_RFaysNriEe2DI8nYtfsznQ" name="BuildRoute">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_VJRCoNriEe2DI8nYtfsznQ" name="from">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_W_SJENriEe2DI8nYtfsznQ" name="to">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_ZzGpwNlcEe2LwL6XIQbkQQ" name="DoNotQuack">
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hW6ZcNlcEe2LwL6XIQbkQQ" client="_ZzGpwNlcEe2LwL6XIQbkQQ" supplier="_icTEUNiEEe2japnN30OJXA" contract="_icTEUNiEEe2japnN30OJXA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_DcTmwNrkEe2DI8nYtfsznQ" memberEnd="_DcVb8NrkEe2DI8nYtfsznQ _DccJoNrkEe2DI8nYtfsznQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DcU04NrkEe2DI8nYtfsznQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DcU04drkEe2DI8nYtfsznQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_DccJoNrkEe2DI8nYtfsznQ" name="navigator" type="_13JqkNrhEe2DI8nYtfsznQ" association="_DcTmwNrkEe2DI8nYtfsznQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_Y7KVINlcEe2LwL6XIQbkQQ" name="DoQuack">
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_fnRAwNlcEe2LwL6XIQbkQQ" client="_Y7KVINlcEe2LwL6XIQbkQQ" supplier="_icTEUNiEEe2japnN30OJXA" contract="_icTEUNiEEe2japnN30OJXA"/>
-    </packagedElement>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="__8oJENldEe2LwL6XIQbkQQ" name="Swiming">
-    <packagedElement xmi:type="uml:Interface" xmi:id="_QeSxMNiFEe2japnN30OJXA" name="ISwim">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_Toaj0NiFEe2japnN30OJXA" name="Swim"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_uE_OkNlcEe2LwL6XIQbkQQ" name="DoNotSwim">
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_xWPj8NlcEe2LwL6XIQbkQQ" client="_uE_OkNlcEe2LwL6XIQbkQQ" supplier="_QeSxMNiFEe2japnN30OJXA" contract="_QeSxMNiFEe2japnN30OJXA"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_u21iQNlcEe2LwL6XIQbkQQ" name="DoSwim">
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_2VcB0NlcEe2LwL6XIQbkQQ" client="_u21iQNlcEe2LwL6XIQbkQQ" supplier="_QeSxMNiFEe2japnN30OJXA" contract="_QeSxMNiFEe2japnN30OJXA"/>
-    </packagedElement>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="_KeUmMNleEe2LwL6XIQbkQQ" name="Flying">
-    <packagedElement xmi:type="uml:Class" xmi:id="_GJ51kNlcEe2LwL6XIQbkQQ" name="DoPartiallyFly">
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Ofj48NlcEe2LwL6XIQbkQQ" client="_GJ51kNlcEe2LwL6XIQbkQQ" supplier="_ZrvYMNiFEe2japnN30OJXA" contract="_ZrvYMNiFEe2japnN30OJXA"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_BRvMwNlcEe2LwL6XIQbkQQ" name="DoNotFly">
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_NwAEQNlcEe2LwL6XIQbkQQ" client="_BRvMwNlcEe2LwL6XIQbkQQ" supplier="_ZrvYMNiFEe2japnN30OJXA" contract="_ZrvYMNiFEe2japnN30OJXA"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_KaSiINlbEe2LwL6XIQbkQQ" name="DoFly">
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_fXD3ANlbEe2LwL6XIQbkQQ" client="_KaSiINlbEe2LwL6XIQbkQQ" supplier="_ZrvYMNiFEe2japnN30OJXA" contract="_ZrvYMNiFEe2japnN30OJXA"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_ZrvYMNiFEe2japnN30OJXA" name="IFly">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_dHvlANiFEe2japnN30OJXA" name="Fly"/>
-    </packagedElement>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="__wREcNnTEe27_7n3JCDiqA" name="Client">
-    <ownedComment xmi:type="uml:Comment" xmi:id="_uubeoNnUEe27_7n3JCDiqA" annotatedElement="_KYa0kNiEEe2japnN30OJXA">
-      <body>QuackingStrategy.Quack();</body>
-    </ownedComment>
-    <ownedComment xmi:type="uml:Comment" xmi:id="__JlNANnVEe27_7n3JCDiqA" annotatedElement="_CjEZINlZEe2LwL6XIQbkQQ">
-      <body>QuackingStrategy = new DoNotQuack();</body>
-    </ownedComment>
-    <packagedElement xmi:type="uml:Class" xmi:id="_CjEZINlZEe2LwL6XIQbkQQ" name="MetalDuck">
-      <generalization xmi:type="uml:Generalization" xmi:id="_CjEZIdlZEe2LwL6XIQbkQQ" general="_KYa0kNiEEe2japnN30OJXA"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_MWTYUNlaEe2LwL6XIQbkQQ" name="Display"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_YvXcMNlZEe2LwL6XIQbkQQ" name="WoodenDuck">
-      <generalization xmi:type="uml:Generalization" xmi:id="_uDlnwNlZEe2LwL6XIQbkQQ" general="_KYa0kNiEEe2japnN30OJXA"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_cI3HkNlZEe2LwL6XIQbkQQ" name="Display"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_KYa0kNiEEe2japnN30OJXA" name="Duck" isAbstract="true">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_YVuc8NiEEe2japnN30OJXA" name="QuackingStrategy" visibility="public" type="_icTEUNiEEe2japnN30OJXA"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_rF13kNiFEe2japnN30OJXA" name="SwimingStrategy" visibility="public" type="_QeSxMNiFEe2japnN30OJXA"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_xoj9sNiFEe2japnN30OJXA" name="FlyingStrategy" type="_ZrvYMNiFEe2japnN30OJXA"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="__3YSItlcEe2LwL6XIQbkQQ" name="iquack" type="_icTEUNiEEe2japnN30OJXA" aggregation="shared" association="__27mMNlcEe2LwL6XIQbkQQ"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_Skf4k9ldEe2LwL6XIQbkQQ" name="iswim" type="_QeSxMNiFEe2japnN30OJXA" aggregation="shared" association="_Skf4kNldEe2LwL6XIQbkQQ"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_byM-QtldEe2LwL6XIQbkQQ" name="ifly" type="_ZrvYMNiFEe2japnN30OJXA" aggregation="shared" association="_byHesNldEe2LwL6XIQbkQQ"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_4-CL4NiEEe2japnN30OJXA" name="Display" isAbstract="true"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_bYMNQNnVEe27_7n3JCDiqA" name="Quack"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_eTDb4NnVEe27_7n3JCDiqA" name="Swin"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_fzrhINnVEe27_7n3JCDiqA" name="Fly"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_8o9TkNiGEe2japnN30OJXA" name="DomesticDuck">
-      <generalization xmi:type="uml:Generalization" xmi:id="_D8zUoNiHEe2japnN30OJXA" general="_KYa0kNiEEe2japnN30OJXA"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_NZaZANiHEe2japnN30OJXA" name="Display"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_LDmPwNlZEe2LwL6XIQbkQQ" name="WildDuck">
-      <generalization xmi:type="uml:Generalization" xmi:id="_s19-ENlZEe2LwL6XIQbkQQ" general="_KYa0kNiEEe2japnN30OJXA"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_S-6ggNlZEe2LwL6XIQbkQQ" name="Display"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_MR8KsNrkEe2DI8nYtfsznQ" name="Client">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_UyqOkNrkEe2DI8nYtfsznQ" annotatedElement="_g_YKcNrhEe2DI8nYtfsznQ _MR8KsNrkEe2DI8nYtfsznQ">
+        <body>Navigator navigator = new Navigator();&#xD;
+navigator.routeStrategy = new ByCar();&#xD;
+navigator.BuildRoute(&quot;A&quot;, &quot;B&quot;);&#xD;
+navigator.routeStrategy = new ByBicycle();&#xD;
+navigator.BuildRoute(&quot;E&quot;, &quot;F&quot;);</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Class" xmi:id="_13JqkNrhEe2DI8nYtfsznQ" name="Navigator">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_c2GygNriEe2DI8nYtfsznQ" name="RouteStrategy" type="_O0wXoNriEe2DI8nYtfsznQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_DcVb8NrkEe2DI8nYtfsznQ" name="iroutestrategy" type="_O0wXoNriEe2DI8nYtfsznQ" aggregation="shared" association="_DcTmwNrkEe2DI8nYtfsznQ"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_4TntANrhEe2DI8nYtfsznQ" name="BuildRoute">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="__Y_0QNrhEe2DI8nYtfsznQ" name="from">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_LUf88NriEe2DI8nYtfsznQ" name="to">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
     </packagedElement>
   </packagedElement>
 </uml:Model>

@@ -34,9 +34,9 @@ Navigator navigator = new Navigator();
 ```
 - User select navigation strategy during runtime and call *BuildRoute()* mthod for building route.
 ```
-	navigator.routeStrategy = new ByCar();
-	navigator.BuildRoute("A", "B");
-	navigator.BuildRoute("C", "D");
+navigator.routeStrategy = new ByCar();
+navigator.BuildRoute("A", "B");
+navigator.BuildRoute("C", "D");
 ```
 - User can than change navigation strategy during runtime, e.g. for *ByBicycle()*.
 ```

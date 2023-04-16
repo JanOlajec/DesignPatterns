@@ -26,6 +26,24 @@ Below mentionet examples [StrategyNavigator](/StrategyNavigator) and [StrategyDu
 
 ### Navigator
 
+**UseCase:**
+- Program shoud prepare route navigation based on sleected navigaton strategy (ByCar, ByBicycle, ByWalk).
+- On the begining, the Navigator object is without navigate strategy.
+```
+Navigator navigator = new Navigator();
+```
+- User select navigation strategy during runtime and call *BuildRoute()* mthod for building route.
+```
+	navigator.routeStrategy = new ByCar();
+	navigator.BuildRoute("A", "B");
+	navigator.BuildRoute("C", "D");
+```
+- User can than change navigation strategy during runtime, e.g. for *ByBicycle()*.
+```
+navigator.routeStrategy = new ByBicycle();
+navigator.BuildRoute("E", "F");
+```
+
 SW design for "Navigator" example:
 ![Strategy in example Navigator](/Doc/UML/StrategyNavigator.JPG)
 

@@ -1,14 +1,23 @@
-# DesignPatterns
+# Design Patterns
 
-Some selected design patterns examples, but firs some Object Oriented Basic and Principes.
+- Knowing the object oriented Basic does not make you a good object oriented designer.
+- Good object oriented designs are reusable, extensible, and maintainable.
+- Patterns show to you how to build systems with good object oriented design qualities.
+- Patterns are proven object-oriented experience.
+- Patterns don't give you code, they give you general solutions to design problems. You apply them to your specific application.
+- Patterns aren't invented, they are discovered.
+- Most patterns and principles address issues of change in software.
+- Most patterns allow some part of a system to vary independently of all other parts.
+- We often try to take what varies in a system and encapsulate it.
+- Patterns provide a shared language that cans your communication with other developers.
 
-## OO Basic
+### Object Oriented Basic
 - Abstraction
 - Encapsulation
 - Polymorphysm
 - Inheritance
 
-## OO Principes
+### Object Oriented Principes
 - Encapsulate what varies.
 - Favor composition over inheritance.
 - Program to interfaces, not implemementation.

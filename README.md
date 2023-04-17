@@ -61,7 +61,7 @@ SW design for "Navigator" example:
 **UseCase:**
 - Duck simulator application.
 - SW design with easy maintainable (extensible and modification).
-- Each duck-type have own approach how to do behavior (strategy): quack, swim, fly.
+- Each duck-type have own approach how to do behavior (strategy): quack, swim, fly. Its realized in constructor.
 ```
 public WildDuck() 
 {
@@ -72,8 +72,8 @@ public WildDuck()
 ```
 - As duck realize behavior with delegate (composition with interface), it can be changed during runtime.
 ```
-metalDuck.QuackingStrategy = new DoQuack();
-metalDuck.Quack();
+wildDuck.QuackingStrategy = new DoQuack();
+wildDuck.Quack();
 ```
 
 SW design for "Duck simulator" example:

@@ -23,3 +23,6 @@ UML diagram with example "Navigator"
 UML diagram with example "Duck simulator" 
 ![Strategy in example Duck](/Doc/UML/StrategyDuck.jpg) 
  
+## Observer pattern
+
+Observer - defines a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically.

@@ -6,7 +6,7 @@ namespace ObserverWeather.Observer
     {
         public void Update(float t, int h, int p)
         {
-            Console.WriteLine($"Statistics temperature:{t}, humidity:{h}, pressure:{p}.");
+            Console.WriteLine($"- Statistics temperature:{t}, humidity:{h}, pressure:{p}.");
         }
     }
 }

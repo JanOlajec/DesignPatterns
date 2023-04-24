@@ -87,3 +87,14 @@ Observer - defines a one-to-many dependency between objects so that when one obj
 - Loosely coupled defines are much more flexible resistant to change.
 - Subject update observers using common interface. That is only one thing which Subject knows.
 - Do not depend on a specific order of notification for observers.
+
+### Weather station
+
+**UsueCase:**
+- Observer pattern in implementation of weather station.
+- Role of Subject is taken by *WeatherData* object which notify over method *Update()* registered observers.
+- Observers are displays objects (*DisplayCurrent, DisplayStatistics, DisplayForecast*) which shows different weather data category.
+- Observers can be added and removed in runtime.
+
+SW design for "Weather station" example:
+![Strategy in example Duck](/Doc/UML/ObserverWeather.JPG)

@@ -21,6 +21,7 @@
 - Encapsulate what varies.
 - Favor composition over inheritance.
 - Program to interfaces, not implemementation.
+- Try to for loosely coupled design between object that interact.
  
 ## Strategy pattern
 
@@ -81,4 +82,8 @@ SW design for "Duck simulator" example:
  
 ## Observer pattern
 
-Observer - defines a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically.
+Observer - defines a one-to-many dependency between objects so that when one object (Subject) changes state, all of its dependents (Observers) are notified and updated automatically.
+
+- Loosely coupled defines are much more flexible resistant to change.
+- Subject update observers using common interface. That is only one thing which Subject knows.
+- Do not depend on a specific order of notification for observers.

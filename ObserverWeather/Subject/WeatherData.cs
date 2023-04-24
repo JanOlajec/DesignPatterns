@@ -8,9 +8,9 @@ namespace ObserverWeather.Subject
     {
         private List<IObserver> observers;
 
-        public float Temperature { get; set; }
-        public int Humidity { get; set; }
-        public int Pressure { get; set; }
+        private float temperature { get; set; }
+        private int humidity { get; set; }
+        private int pressure { get; set; }
 
         public WeatherData()
         {
@@ -27,17 +27,24 @@ namespace ObserverWeather.Subject
             observers.Remove(o);
         }
 
+        public void SetMeasurements(float temperature, int humidity, int pressure)
+        {
+            this.temperature = temperature;
+            this.humidity = humidity;
+            this.pressure = pressure;
+        }
+
+        public void MeasurementsChanged()
+        {
+            Console.WriteLine("Measurements changed, update subscribed displays:");
+            NotifyObservers();
+        }
+
         public void NotifyObservers()
         {
-            Console.WriteLine("Measurements changed, update displays:");
-
-            float tmpr = Temperature;
-            int hmd = Humidity;
-            int prss = Pressure;
-
             foreach (IObserver observer in observers)
             {
-                observer.Update(tmpr, hmd, prss);
+                observer.Update(temperature, humidity, pressure);
             }
 
             Console.WriteLine();

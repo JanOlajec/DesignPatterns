@@ -14,10 +14,6 @@ namespace ObserverWeather
         {
             var weather = new WeatherData();
 
-            weather.Temperature = 12.8f;
-            weather.Humidity = 60;
-            weather.Pressure = 1025;
-
             var current = new DisplayCurrent();
             var stats = new DisplayStatistics();
             var forecast = new DisplayForecast();
@@ -26,12 +22,17 @@ namespace ObserverWeather
             weather.AddObserver(stats);
             weather.AddObserver(forecast);
 
-            weather.NotifyObservers();
+            weather.SetMeasurements(12.8f, 60, 1020);
+            weather.MeasurementsChanged();
             
-            weather.Temperature = 20f;
-            weather.Humidity = 75;
+            weather.SetMeasurements(20, 75, 1030);
+            weather.MeasurementsChanged();
 
-            weather.NotifyObservers();
+            weather.RemoveObserver(stats);
+            weather.RemoveObserver(forecast);
+
+            weather.SetMeasurements(33.5f, 80, 1035);
+            weather.MeasurementsChanged();
 
             Console.ReadKey();
         }

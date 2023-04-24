@@ -88,6 +88,8 @@ Observer - defines a one-to-many dependency between objects so that when one obj
 - Subject update observers using common interface. That is only one thing which Subject knows.
 - Do not depend on a specific order of notification for observers.
 
+Below mentionet example [ObserverWeather](/ObserverWeather) is designed according Observer Pattern.
+
 ### Weather station
 
 **UsueCase:**

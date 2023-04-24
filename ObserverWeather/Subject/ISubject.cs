@@ -4,8 +4,8 @@ namespace ObserverWeather.Subject
 {
     internal interface ISubject
     {
-        void AddObserver(IObserver o);
-        void RemoveObserver(IObserver o);
+        void AddObserver(IObserver observer);
+        void RemoveObserver(IObserver observer);
         void NotifyObservers();
     }
 }

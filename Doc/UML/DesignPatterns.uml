@@ -169,4 +169,28 @@ navigator.BuildRoute(&quot;E&quot;, &quot;F&quot;);</body>
       </packagedElement>
     </packagedElement>
   </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_HXbQsOK0Ee26kO-ZwEiuMw" name="ObserverWeather">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_OnV0AOK0Ee26kO-ZwEiuMw" name="ISubject">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_oxqy4OK0Ee26kO-ZwEiuMw" name="AddObserver">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sV2rUOK0Ee26kO-ZwEiuMw" name="observer" type="_QrpOEOK0Ee26kO-ZwEiuMw"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_xVLFAOK0Ee26kO-ZwEiuMw" name="RemoveObserver">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_0eiCoOK0Ee26kO-ZwEiuMw" name="observer" type="_QrpOEOK0Ee26kO-ZwEiuMw"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1vsvkOK0Ee26kO-ZwEiuMw" name="NotifyObservers"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_QrpOEOK0Ee26kO-ZwEiuMw" name="IObserver">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_TTVpEOK0Ee26kO-ZwEiuMw" name="Update">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_dVJFMOK0Ee26kO-ZwEiuMw" name="temperature">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_hRzvEOK0Ee26kO-ZwEiuMw" name="humidity">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_l0UQ8OK0Ee26kO-ZwEiuMw" name="pressure">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
 </uml:Model>

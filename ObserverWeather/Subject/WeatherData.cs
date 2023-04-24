@@ -17,14 +17,14 @@ namespace ObserverWeather.Subject
             observers = new List<IObserver>();
         }
 
-        public void AddObserver(IObserver o)
+        public void AddObserver(IObserver observer)
         {
-            observers.Add(o);
+            observers.Add(observer);
         }
 
-        public void RemoveObserver(IObserver o)
+        public void RemoveObserver(IObserver observer)
         {
-            observers.Remove(o);
+            observers.Remove(observer);
         }
 
         public void SetMeasurements(float temperature, int humidity, int pressure)

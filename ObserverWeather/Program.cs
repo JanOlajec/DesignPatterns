@@ -1,4 +1,6 @@
 ﻿using System;
+using ObserverWeather.Observer;
+using ObserverWeather.Subject;
 
 namespace ObserverWeather
 {
@@ -16,7 +18,20 @@ namespace ObserverWeather
             weather.Humidity = 60;
             weather.Pressure = 1025;
 
-            weather.MeasurementsChanged();
+            var current = new DisplayCurrent();
+            var stats = new DisplayStatistics();
+            var forecast = new DisplayForecast();
+
+            weather.AddObserver(current);
+            weather.AddObserver(stats);
+            weather.AddObserver(forecast);
+
+            weather.NotifyObservers();
+            
+            weather.Temperature = 20f;
+            weather.Humidity = 75;
+
+            weather.NotifyObservers();
 
             Console.ReadKey();
         }

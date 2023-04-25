@@ -170,72 +170,86 @@ navigator.BuildRoute(&quot;E&quot;, &quot;F&quot;);</body>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_HXbQsOK0Ee26kO-ZwEiuMw" name="ObserverWeather">
-    <ownedComment xmi:type="uml:Comment" xmi:id="_Y697gONaEe2wI-cPu7E7cQ" annotatedElement="_HJ9_EONaEe2wI-cPu7E7cQ">
-      <body>weather.AddObserver(this);</body>
-    </ownedComment>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_OnV0AOK0Ee26kO-ZwEiuMw" name="ISubject">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_oxqy4OK0Ee26kO-ZwEiuMw" name="AddObserver">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sV2rUOK0Ee26kO-ZwEiuMw" name="observer" type="_QrpOEOK0Ee26kO-ZwEiuMw"/>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_xVLFAOK0Ee26kO-ZwEiuMw" name="RemoveObserver">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_0eiCoOK0Ee26kO-ZwEiuMw" name="observer" type="_QrpOEOK0Ee26kO-ZwEiuMw"/>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_1vsvkOK0Ee26kO-ZwEiuMw" name="NotifyObservers"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_xdiLAONdEe2wI-cPu7E7cQ" memberEnd="_xdkAMONdEe2wI-cPu7E7cQ _xdnDgONdEe2wI-cPu7E7cQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xdjZIONdEe2wI-cPu7E7cQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xdjZIeNdEe2wI-cPu7E7cQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_xdnDgONdEe2wI-cPu7E7cQ" name="isubject" type="_OnV0AOK0Ee26kO-ZwEiuMw" association="_xdiLAONdEe2wI-cPu7E7cQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_QrpOEOK0Ee26kO-ZwEiuMw" name="IObserver">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_TTVpEOK0Ee26kO-ZwEiuMw" name="Update">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_dVJFMOK0Ee26kO-ZwEiuMw" name="temperature">
+    <packagedElement xmi:type="uml:Package" xmi:id="_F_nvAONeEe2wI-cPu7E7cQ" name="Subject">
+      <packagedElement xmi:type="uml:Class" xmi:id="_yHf8wONXEe2wI-cPu7E7cQ" name="WeatherData">
+        <generalization xmi:type="uml:Generalization" xmi:id="_0z-KEONXEe2wI-cPu7E7cQ" general="_OnV0AOK0Ee26kO-ZwEiuMw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_48_08ONXEe2wI-cPu7E7cQ" name="temperature" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_hRzvEOK0Ee26kO-ZwEiuMw" name="humidity">
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_9HGd4ONXEe2wI-cPu7E7cQ" name="humidity" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_l0UQ8OK0Ee26kO-ZwEiuMw" name="pressure">
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_BpfD8ONYEe2wI-cPu7E7cQ" name="pressure" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_FvWGEONYEe2wI-cPu7E7cQ" name="observers" visibility="private" type="_QrpOEOK0Ee26kO-ZwEiuMw"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_co2_AONZEe2wI-cPu7E7cQ" name="WeatherData">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_gS618ONZEe2wI-cPu7E7cQ" annotatedElement="_co2_AONZEe2wI-cPu7E7cQ">
+            <body>constructor</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_lQh_cONZEe2wI-cPu7E7cQ" name="SetMeasurements">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_pGHJ4ONZEe2wI-cPu7E7cQ" name="t">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_sk1TgONZEe2wI-cPu7E7cQ" name="h">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_usyegONZEe2wI-cPu7E7cQ" name="p">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_x5lxsONZEe2wI-cPu7E7cQ" name="MeasurementsChanged"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_OnV0AOK0Ee26kO-ZwEiuMw" name="ISubject">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xdkAMONdEe2wI-cPu7E7cQ" name="iobserver" type="_QrpOEOK0Ee26kO-ZwEiuMw" aggregation="shared" association="_xdiLAONdEe2wI-cPu7E7cQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xdlOUONdEe2wI-cPu7E7cQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xdmccONdEe2wI-cPu7E7cQ" value="*"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_oxqy4OK0Ee26kO-ZwEiuMw" name="AddObserver">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_sV2rUOK0Ee26kO-ZwEiuMw" name="observer" type="_QrpOEOK0Ee26kO-ZwEiuMw"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_xVLFAOK0Ee26kO-ZwEiuMw" name="RemoveObserver">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_0eiCoOK0Ee26kO-ZwEiuMw" name="observer" type="_QrpOEOK0Ee26kO-ZwEiuMw"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_1vsvkOK0Ee26kO-ZwEiuMw" name="NotifyObservers"/>
+      </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_yHf8wONXEe2wI-cPu7E7cQ" name="WeatherData">
-      <generalization xmi:type="uml:Generalization" xmi:id="_0z-KEONXEe2wI-cPu7E7cQ" general="_OnV0AOK0Ee26kO-ZwEiuMw"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_48_08ONXEe2wI-cPu7E7cQ" name="temperature" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_9HGd4ONXEe2wI-cPu7E7cQ" name="humidity" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_BpfD8ONYEe2wI-cPu7E7cQ" name="pressure" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_FvWGEONYEe2wI-cPu7E7cQ" name="observers" visibility="private" type="_QrpOEOK0Ee26kO-ZwEiuMw"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_co2_AONZEe2wI-cPu7E7cQ" name="WeatherData">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_gS618ONZEe2wI-cPu7E7cQ" annotatedElement="_co2_AONZEe2wI-cPu7E7cQ">
-          <body>constructor</body>
-        </ownedComment>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_lQh_cONZEe2wI-cPu7E7cQ" name="SetMeasurements">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pGHJ4ONZEe2wI-cPu7E7cQ" name="t">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sk1TgONZEe2wI-cPu7E7cQ" name="h">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_usyegONZEe2wI-cPu7E7cQ" name="p">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_x5lxsONZEe2wI-cPu7E7cQ" name="MeasurementsChanged"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_HJ9_EONaEe2wI-cPu7E7cQ" name="DisplayCurrent">
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_b4h40ONaEe2wI-cPu7E7cQ" client="_HJ9_EONaEe2wI-cPu7E7cQ" supplier="_QrpOEOK0Ee26kO-ZwEiuMw" contract="_QrpOEOK0Ee26kO-ZwEiuMw"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_ODO88ONaEe2wI-cPu7E7cQ" name="DisplayCurrent">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_T_DbIONaEe2wI-cPu7E7cQ" name="weather" type="_yHf8wONXEe2wI-cPu7E7cQ"/>
-      </ownedOperation>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_-veCgONaEe2wI-cPu7E7cQ" name="DisplayStatistics">
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_D6G7YONbEe2wI-cPu7E7cQ" client="_-veCgONaEe2wI-cPu7E7cQ" supplier="_QrpOEOK0Ee26kO-ZwEiuMw" contract="_QrpOEOK0Ee26kO-ZwEiuMw"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_BsnwIONbEe2wI-cPu7E7cQ" name="DisplayForecast">
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_ElxukONbEe2wI-cPu7E7cQ" client="_BsnwIONbEe2wI-cPu7E7cQ" supplier="_QrpOEOK0Ee26kO-ZwEiuMw" contract="_QrpOEOK0Ee26kO-ZwEiuMw"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_N-tsgONeEe2wI-cPu7E7cQ" name="Observer">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_Y697gONaEe2wI-cPu7E7cQ" annotatedElement="_HJ9_EONaEe2wI-cPu7E7cQ">
+        <body>weather.AddObserver(this);</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_QrpOEOK0Ee26kO-ZwEiuMw" name="IObserver">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_TTVpEOK0Ee26kO-ZwEiuMw" name="Update">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_dVJFMOK0Ee26kO-ZwEiuMw" name="temperature">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hRzvEOK0Ee26kO-ZwEiuMw" name="humidity">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_l0UQ8OK0Ee26kO-ZwEiuMw" name="pressure">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_HJ9_EONaEe2wI-cPu7E7cQ" name="DisplayCurrent">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_b4h40ONaEe2wI-cPu7E7cQ" client="_HJ9_EONaEe2wI-cPu7E7cQ" supplier="_QrpOEOK0Ee26kO-ZwEiuMw" contract="_QrpOEOK0Ee26kO-ZwEiuMw"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_ODO88ONaEe2wI-cPu7E7cQ" name="DisplayCurrent">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_T_DbIONaEe2wI-cPu7E7cQ" name="weather" type="_yHf8wONXEe2wI-cPu7E7cQ"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_-veCgONaEe2wI-cPu7E7cQ" name="DisplayStatistics">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_D6G7YONbEe2wI-cPu7E7cQ" client="_-veCgONaEe2wI-cPu7E7cQ" supplier="_QrpOEOK0Ee26kO-ZwEiuMw" contract="_QrpOEOK0Ee26kO-ZwEiuMw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_BsnwIONbEe2wI-cPu7E7cQ" name="DisplayForecast">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_ElxukONbEe2wI-cPu7E7cQ" client="_BsnwIONbEe2wI-cPu7E7cQ" supplier="_QrpOEOK0Ee26kO-ZwEiuMw" contract="_QrpOEOK0Ee26kO-ZwEiuMw"/>
+      </packagedElement>
     </packagedElement>
   </packagedElement>
 </uml:Model>
